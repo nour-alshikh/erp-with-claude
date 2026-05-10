@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('stock_layers', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
             $table->foreignId('warehouse_id')->constrained()->cascadeOnDelete();
             $table->unsignedInteger('qty_remaining');
@@ -18,6 +19,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->index(['product_id', 'warehouse_id', 'date']);
+            $table->softDeletes();
         });
     }
 

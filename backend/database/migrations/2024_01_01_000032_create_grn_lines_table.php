@@ -10,12 +10,14 @@ return new class extends Migration
     {
         Schema::create('grn_lines', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('grn_id')->constrained('goods_received_notes')->cascadeOnDelete();
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
             $table->unsignedInteger('qty_ordered')->default(0);
             $table->unsignedInteger('qty_received')->default(0);
             $table->unsignedBigInteger('unit_cost');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

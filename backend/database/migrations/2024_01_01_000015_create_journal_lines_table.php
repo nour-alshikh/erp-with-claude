@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('journal_lines', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('journal_entry_id')->constrained()->cascadeOnDelete();
             $table->foreignId('account_id')->constrained()->cascadeOnDelete();
             $table->unsignedBigInteger('debit')->default(0);  // cents
@@ -19,6 +20,7 @@ return new class extends Migration
 
             $table->index('journal_entry_id');
             $table->index('account_id');
+            $table->softDeletes();
         });
     }
 

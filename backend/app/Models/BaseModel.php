@@ -17,12 +17,11 @@ abstract class BaseModel extends Model
     protected static function booted(): void
     {
         static::addGlobalScope(new CompanyScope());
-    }
 
-    protected static function creating($model): void
-    {
-        if (empty($model->company_id) && auth()->check()) {
-            $model->company_id = auth()->user()->company_id;
-        }
+        static::creating(function ($model) {
+            if (empty($model->company_id) && auth()->check()) {
+                $model->company_id = auth()->user()->company_id;
+            }
+        });
     }
 }

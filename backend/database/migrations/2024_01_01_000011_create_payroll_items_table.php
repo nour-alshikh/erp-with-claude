@@ -10,12 +10,14 @@ return new class extends Migration
     {
         Schema::create('payroll_items', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('payroll_run_id')->constrained()->cascadeOnDelete();
             $table->foreignId('employee_id')->constrained()->cascadeOnDelete();
             $table->enum('type', ['earning', 'deduction']);
             $table->string('description');
             $table->unsignedBigInteger('amount'); // cents
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -10,12 +10,14 @@ return new class extends Migration
     {
         Schema::create('invoice_lines', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('invoice_id')->constrained()->cascadeOnDelete();
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
             $table->unsignedInteger('qty')->default(1);
             $table->unsignedBigInteger('unit_price');
             $table->unsignedBigInteger('total');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

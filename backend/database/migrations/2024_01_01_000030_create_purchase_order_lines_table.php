@@ -10,12 +10,14 @@ return new class extends Migration
     {
         Schema::create('purchase_order_lines', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('purchase_order_id')->constrained()->cascadeOnDelete();
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
             $table->unsignedInteger('qty')->default(1);
             $table->unsignedBigInteger('unit_cost');
             $table->unsignedBigInteger('total');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -10,10 +10,12 @@ return new class extends Migration
     {
         Schema::create('pos_payments', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('pos_transaction_id')->constrained()->cascadeOnDelete();
             $table->enum('method', ['cash', 'card']);
             $table->unsignedBigInteger('amount');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('quotation_lines', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('quotation_id')->constrained()->cascadeOnDelete();
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
             $table->unsignedInteger('qty')->default(1);
@@ -17,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('discount')->default(0); // cents
             $table->unsignedBigInteger('total');     // cents
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

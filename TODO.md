@@ -5,14 +5,14 @@
 ---
 
 ## Phase 1: Foundation
-- [ ] Laravel project setup (Laravel 11, PHP 8.3) + all packages installed
-- [ ] Next.js project setup (App Router, TypeScript, Tailwind, shadcn/ui, Recharts, TanStack Query v5)
-- [ ] Modular folder structure created (`app/Modules/`)
-- [ ] All migrations written (see database.md)
-- [ ] All seeders: roles, permissions, demo company, sample data
-- [ ] `AppServiceProvider`: bind all Repository interfaces to implementations
-- [ ] Base classes: `BaseController`, `BaseService`, `BaseRepository`
-- [ ] Helper: `money()` cents formatter, `toCents()` converter
+- [x] Laravel project setup (Laravel 11, PHP 8.3) + all packages installed
+- [x] Next.js project setup (App Router, TypeScript, Tailwind, shadcn/ui, Recharts, TanStack Query v5)
+- [x] Modular folder structure created (`app/Modules/`)
+- [x] All migrations written (see database.md)
+- [x] All seeders: roles, permissions, demo company, sample data
+- [x] `AppServiceProvider`: bind all Repository interfaces to implementations
+- [x] Base classes: `BaseController`, `BaseService`, `BaseRepository`
+- [x] Helper: `money()` cents formatter, `toCents()` converter
 
 📚 Dev Guide — Foundation:
 The modular structure (`app/Modules/{Name}/Controllers|Services|Repositories|Models|Requests|Resources|routes.php`)
