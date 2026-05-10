@@ -46,14 +46,14 @@ JWT vs Sanctum token storage security (httpOnly cookie vs localStorage trade-off
 ---
 
 ## Phase 3: HR Module
-- [ ] Departments CRUD (`/api/hr/departments`)
-- [ ] Positions CRUD (`/api/hr/positions`)
-- [ ] Employees CRUD with document upload (`/api/hr/employees`)
-- [ ] Attendance: clock in/out API + manual entry (`/api/hr/attendance`)
-- [ ] Leave types CRUD + Leave requests with approval flow
-- [ ] Payroll: calculate net pay per employee per month
-- [ ] Payslip PDF generation (queued job)
-- [ ] Frontend: employees list, employee profile page, attendance calendar, leave management
+- [x] Departments CRUD (`/api/hr/departments`)
+- [x] Positions CRUD (`/api/hr/positions`)
+- [x] Employees CRUD with document upload (`/api/hr/employees`)
+- [x] Attendance: clock in/out API + manual entry (`/api/hr/attendance`)
+- [x] Leave types CRUD + Leave requests with approval flow
+- [x] Payroll: calculate net pay per employee per month
+- [x] Payslip PDF generation (queued job)
+- [x] Frontend: employees list, employee profile page, attendance calendar, leave management
 
 📚 Dev Guide — Payroll Calculation:
 `net_pay = base_salary + SUM(earnings) - SUM(deductions)`.

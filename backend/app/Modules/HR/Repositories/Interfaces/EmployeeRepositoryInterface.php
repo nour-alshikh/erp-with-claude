@@ -14,4 +14,5 @@ interface EmployeeRepositoryInterface
     public function update(Employee $employee, array $data): Employee;
     public function delete(Employee $employee): bool;
     public function byDepartment(int $departmentId): Collection;
+    public function allActive(): Collection;
 }

@@ -45,4 +45,9 @@ class EmployeeRepository extends BaseRepository implements EmployeeRepositoryInt
     {
         return $this->model->where('department_id', $departmentId)->get();
     }
+
+    public function allActive(): Collection
+    {
+        return $this->model->where('status', 'active')->get();
+    }
 }

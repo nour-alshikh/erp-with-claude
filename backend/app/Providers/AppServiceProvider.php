@@ -10,12 +10,32 @@ class AppServiceProvider extends ServiceProvider
     {
         // ── HR Module ────────────────────────────────────────────────────────
         $this->app->bind(
+            \App\Modules\HR\Repositories\Interfaces\DepartmentRepositoryInterface::class,
+            \App\Modules\HR\Repositories\DepartmentRepository::class,
+        );
+        $this->app->bind(
+            \App\Modules\HR\Repositories\Interfaces\PositionRepositoryInterface::class,
+            \App\Modules\HR\Repositories\PositionRepository::class,
+        );
+        $this->app->bind(
             \App\Modules\HR\Repositories\Interfaces\EmployeeRepositoryInterface::class,
             \App\Modules\HR\Repositories\EmployeeRepository::class,
         );
         $this->app->bind(
             \App\Modules\HR\Repositories\Interfaces\AttendanceRepositoryInterface::class,
             \App\Modules\HR\Repositories\AttendanceRepository::class,
+        );
+        $this->app->bind(
+            \App\Modules\HR\Repositories\Interfaces\LeaveTypeRepositoryInterface::class,
+            \App\Modules\HR\Repositories\LeaveTypeRepository::class,
+        );
+        $this->app->bind(
+            \App\Modules\HR\Repositories\Interfaces\LeaveRequestRepositoryInterface::class,
+            \App\Modules\HR\Repositories\LeaveRequestRepository::class,
+        );
+        $this->app->bind(
+            \App\Modules\HR\Repositories\Interfaces\PayrollRunRepositoryInterface::class,
+            \App\Modules\HR\Repositories\PayrollRunRepository::class,
         );
 
         // ── Accounting Module ────────────────────────────────────────────────
