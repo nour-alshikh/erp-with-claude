@@ -178,13 +178,13 @@ in React for fast cart interactions, TanStack Query mutations with rollback.
 ---
 
 ## Phase 9: Financial Reports
-- [ ] Trial Balance (all accounts, debit/credit totals, balance)
-- [ ] Income Statement / P&L (revenue groups - expense groups = net profit)
-- [ ] Balance Sheet (assets = liabilities + equity)
-- [ ] AR Aging report (bucket by 0-30, 31-60, 61-90, 90+ days overdue)
-- [ ] AP Aging report
+- [x] Trial Balance (all accounts, debit/credit totals, balance)
+- [x] Income Statement / P&L (revenue groups - expense groups = net profit)
+- [x] Balance Sheet (assets = liabilities + equity)
+- [x] AR Aging report (bucket by 0-30, 31-60, 61-90, 90+ days overdue)
+- [x] AP Aging report
 - [ ] Export all reports to PDF (DomPDF, queued) and Excel (maatwebsite/excel)
-- [ ] Frontend: report pages with date range filters, print-friendly layout
+- [x] Frontend: report pages with date range filters, print-friendly layout
 
 📚 Dev Guide — Financial Report Queries:
 Reports are aggregate SQL queries grouped by account type.
