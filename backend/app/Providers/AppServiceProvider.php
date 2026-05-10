@@ -70,6 +70,18 @@ class AppServiceProvider extends ServiceProvider
 
         // ── Purchasing Module ────────────────────────────────────────────────
         $this->app->bind(
+            \App\Modules\Purchasing\Repositories\Interfaces\VendorRepositoryInterface::class,
+            \App\Modules\Purchasing\Repositories\VendorRepository::class,
+        );
+        $this->app->bind(
+            \App\Modules\Purchasing\Repositories\Interfaces\PurchaseOrderRepositoryInterface::class,
+            \App\Modules\Purchasing\Repositories\PurchaseOrderRepository::class,
+        );
+        $this->app->bind(
+            \App\Modules\Purchasing\Repositories\Interfaces\GrnRepositoryInterface::class,
+            \App\Modules\Purchasing\Repositories\GrnRepository::class,
+        );
+        $this->app->bind(
             \App\Modules\Purchasing\Repositories\Interfaces\VendorBillRepositoryInterface::class,
             \App\Modules\Purchasing\Repositories\VendorBillRepository::class,
         );

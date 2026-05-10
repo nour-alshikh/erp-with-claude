@@ -134,12 +134,12 @@ Laravel Observers, database transactions for multi-step side effects.
 ---
 
 ## Phase 7: Purchasing Module
-- [ ] Vendors CRUD
-- [ ] Purchase Request → Purchase Order workflow
-- [ ] Goods Received Note (GRN) — confirms stock IN + auto-creates vendor bill
-- [ ] Vendor bill payment → auto-creates AP journal entry
-- [ ] Purchase reports
-- [ ] Frontend: vendor list, PO form, GRN confirmation, bill payment
+- [x] Vendors CRUD
+- [x] Purchase Request → Purchase Order workflow
+- [x] Goods Received Note (GRN) — confirms stock IN + auto-creates vendor bill
+- [x] Vendor bill payment → auto-creates AP journal entry
+- [x] Purchase reports
+- [x] Frontend: vendor list, PO form, GRN confirmation, bill payment
 
 📚 Dev Guide — GRN & Auto-Journal:
 Three-way matching: PO (what was ordered) + GRN (what was received) + Bill (what was invoiced).

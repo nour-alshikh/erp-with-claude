@@ -11,7 +11,7 @@ class GoodsReceivedNote extends BaseModel
 {
     protected $table = 'goods_received_notes';
 
-    protected $fillable = ['company_id', 'purchase_order_id', 'date', 'status', 'notes'];
+    protected $fillable = ['company_id', 'purchase_order_id', 'warehouse_id', 'date', 'status', 'notes'];
 
     protected function casts(): array
     {
