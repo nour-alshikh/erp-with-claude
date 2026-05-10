@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('pos_sessions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('company_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('warehouse_id')->constrained()->cascadeOnDelete();
             $table->foreignId('opened_by')->constrained('users');
             $table->foreignId('closed_by')->nullable()->constrained('users')->nullOnDelete();
             $table->timestamp('opened_at');

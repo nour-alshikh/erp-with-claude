@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('pos_transactions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('pos_session_id')->constrained()->cascadeOnDelete();
             $table->string('transaction_number')->unique();
             $table->timestamp('date');

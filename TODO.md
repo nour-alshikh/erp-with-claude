@@ -155,12 +155,12 @@ for cascading side effects, idempotency to prevent double-processing.
 ---
 
 ## Phase 8: POS Module
-- [ ] Open POS session with cash float entry
-- [ ] POS terminal: product search/scan, add to cart, quantity, discount
-- [ ] Multiple payment methods (cash, card, split)
-- [ ] Complete transaction → stock deduction + journal entry
-- [ ] Close session + reconciliation report (expected vs actual cash)
-- [ ] Frontend: POS terminal UI (keyboard-first, large tap targets for tablet)
+- [x] Open POS session with cash float entry
+- [x] POS terminal: product search/scan, add to cart, quantity, discount
+- [x] Multiple payment methods (cash, card, split)
+- [x] Complete transaction → stock deduction + journal entry
+- [x] Close session + reconciliation report (expected vs actual cash)
+- [x] Frontend: POS terminal UI (keyboard-first, large tap targets for tablet)
 
 📚 Dev Guide — POS Integration:
 POS = Inventory + Accounting + Sales intersecting. Each transaction:

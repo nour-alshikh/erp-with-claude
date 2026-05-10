@@ -9,15 +9,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class PosTransactionLine extends BaseModel
 {
     protected $fillable = [
-        'company_id', 'pos_transaction_id', 'product_id', 'qty', 'unit_price', 'total',
+        'company_id', 'pos_transaction_id', 'product_id', 'qty', 'unit_price', 'cost_per_unit', 'total',
     ];
 
     protected function casts(): array
     {
         return [
-            'qty'        => 'integer',
-            'unit_price' => 'integer',
-            'total'      => 'integer',
+            'qty'          => 'integer',
+            'unit_price'   => 'integer',
+            'cost_per_unit' => 'integer',
+            'total'        => 'integer',
         ];
     }
 

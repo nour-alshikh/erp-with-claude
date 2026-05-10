@@ -15,6 +15,7 @@ return new class extends Migration
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
             $table->unsignedInteger('qty')->default(1);
             $table->unsignedBigInteger('unit_price');
+            $table->unsignedBigInteger('cost_per_unit')->default(0);
             $table->unsignedBigInteger('total');
             $table->timestamps();
             $table->softDeletes();
