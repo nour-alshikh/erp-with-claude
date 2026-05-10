@@ -18,7 +18,7 @@ Route::get('/health', fn () => response()->json(['status' => 'ok']));
 require base_path('app/Modules/Auth/routes.php');
 
 // Protected routes
-Route::middleware(['auth:sanctum'])->group(function () {
+Route::middleware(['auth:sanctum', 'throttle:60,1'])->group(function () {
     require base_path('app/Modules/HR/routes.php');
     require base_path('app/Modules/Accounting/routes.php');
     require base_path('app/Modules/Inventory/routes.php');

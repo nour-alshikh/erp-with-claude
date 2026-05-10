@@ -91,4 +91,7 @@
   html {
     @apply font-sans;
   }
+  [dir="rtl"] body {
+    font-family: var(--font-arabic), sans-serif;
+  }
 }

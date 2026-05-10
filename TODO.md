@@ -209,11 +209,11 @@ financial statement structure (the accounting equation: Assets = Liabilities + E
 ---
 
 ## Phase 11: Polish
-- [ ] RTL layout support (Arabic, font: Cairo from Google Fonts)
-- [ ] Dark mode (Tailwind `dark:` classes + theme toggle)
-- [ ] Mobile responsive layouts (POS especially — tablet-optimized)
-- [ ] Loading skeletons for all data tables and cards
-- [ ] Error handling + toast notifications (sonner or shadcn Toast)
-- [ ] API rate limiting (Laravel throttle middleware)
-- [ ] Input sanitization (FormRequests + XSS prevention)
-- [ ] Pagination on all list endpoints
+- [x] RTL layout support (Arabic, font: Cairo from Google Fonts)
+- [x] Dark mode (Tailwind `dark:` classes + theme toggle)
+- [x] Mobile responsive layouts (POS especially — tablet-optimized)
+- [x] Loading skeletons for all data tables and cards
+- [x] Error handling + toast notifications (sonner or shadcn Toast)
+- [x] API rate limiting (Laravel throttle middleware)
+- [x] Input sanitization (FormRequests + XSS prevention)
+- [x] Pagination on all list endpoints
