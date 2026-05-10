@@ -24,14 +24,14 @@ PHP 8.3 features (readonly properties, typed class constants), Laravel module or
 ---
 
 ## Phase 2: Auth & RBAC
-- [ ] `POST /api/auth/login` — return Sanctum token
-- [ ] `POST /api/auth/logout`
-- [ ] `GET  /api/auth/me` — return user + roles + permissions array
-- [ ] Spatie roles seeded: Super Admin, Accountant, HR Manager, Warehouse, Sales Rep, Purchasing, Viewer
-- [ ] Permission matrix seeded (per module per role — see Architecture.md)
-- [ ] Next.js: login page + auth context (`useAuth` hook)
-- [ ] Protected layout: redirect unauthenticated users
-- [ ] Sidebar renders only permitted nav items based on permissions from `/me`
+- [x] `POST /api/auth/login` — return Sanctum token
+- [x] `POST /api/auth/logout`
+- [x] `GET  /api/auth/me` — return user + roles + permissions array
+- [x] Spatie roles seeded: Super Admin, Accountant, HR Manager, Warehouse, Sales Rep, Purchasing, Viewer
+- [x] Permission matrix seeded (per module per role — see Architecture.md)
+- [x] Next.js: login page + auth context (`useAuth` hook)
+- [x] Protected layout: redirect unauthenticated users
+- [x] Sidebar renders only permitted nav items based on permissions from `/me`
 
 📚 Dev Guide — Auth + RBAC:
 Spatie Laravel Permission stores roles/permissions in DB tables with pivot links.

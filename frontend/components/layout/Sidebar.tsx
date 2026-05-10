@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
-  { label: 'Dashboard',   href: '/',                    permission: null },
+  { label: 'Dashboard',   href: '/dashboard',           permission: null },
   { label: 'HR',          href: '/hr/employees',         permission: 'view-hr' },
   { label: 'Accounting',  href: '/accounting/chart-of-accounts', permission: 'view-accounting' },
   { label: 'Inventory',   href: '/inventory/products',   permission: 'view-inventory' },
@@ -40,7 +40,7 @@ export function Sidebar() {
             <span
               className={cn(
                 'block px-3 py-2 rounded-md text-sm font-medium transition-colors',
-                pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
+                pathname === item.href || pathname.startsWith(item.href + '/')
                   ? 'bg-primary text-primary-foreground'
                   : 'text-gray-700 hover:bg-gray-100'
               )}
