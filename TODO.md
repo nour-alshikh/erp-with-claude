@@ -88,13 +88,13 @@ Study: double-entry bookkeeping fundamentals, Chart of Accounts standard numberi
 ---
 
 ## Phase 5: Inventory Module
-- [ ] Products CRUD (SKU, barcode, UOM, reorder point, cost price, selling price)
-- [ ] Warehouses CRUD
-- [ ] Stock Movement: IN, OUT, TRANSFER endpoints
-- [ ] Current stock level computed from movements (never stored as column)
-- [ ] Low stock alert on every OUT movement (queued notification)
-- [ ] FIFO valuation: cost of goods sold computed from `stock_layers`
-- [ ] Frontend: products list, warehouse stock view, movement history
+- [x] Products CRUD (SKU, barcode, UOM, reorder point, cost price, selling price)
+- [x] Warehouses CRUD
+- [x] Stock Movement: IN, OUT, TRANSFER endpoints
+- [x] Current stock level computed from movements (never stored as column)
+- [x] Low stock alert on every OUT movement (queued notification)
+- [x] FIFO valuation: cost of goods sold computed from `stock_layers`
+- [x] Frontend: products list, warehouse stock view, movement history
 
 📚 Dev Guide — FIFO Inventory:
 Never store "current stock" as a direct column — derive it from:

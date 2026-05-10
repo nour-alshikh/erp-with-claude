@@ -33,9 +33,9 @@ class Product extends BaseModel
 
     public function currentStock(int $warehouseId): int
     {
-        return $this->stockMovements()
+        // Derived from FIFO layers so transfers are handled correctly
+        return (int) $this->stockLayers()
             ->where('warehouse_id', $warehouseId)
-            ->selectRaw("SUM(CASE WHEN type = 'in' THEN qty ELSE -qty END) as stock")
-            ->value('stock') ?? 0;
+            ->sum('qty_remaining');
     }
 }
