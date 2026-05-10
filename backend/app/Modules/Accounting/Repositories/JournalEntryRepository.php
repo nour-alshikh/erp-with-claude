@@ -19,6 +19,26 @@ class JournalEntryRepository extends BaseRepository implements JournalEntryRepos
         return $this->model->with('lines.account')->orderByDesc('date')->paginate($perPage);
     }
 
+    public function filter(array $filters, int $perPage = 15): LengthAwarePaginator
+    {
+        $q = $this->model->with('lines.account')->orderByDesc('date');
+
+        if (! empty($filters['date_from'])) {
+            $q->where('date', '>=', $filters['date_from']);
+        }
+        if (! empty($filters['date_to'])) {
+            $q->where('date', '<=', $filters['date_to']);
+        }
+        if (! empty($filters['type'])) {
+            $q->where('type', $filters['type']);
+        }
+        if (! empty($filters['status'])) {
+            $q->where('status', $filters['status']);
+        }
+
+        return $q->paginate($perPage);
+    }
+
     public function findOrFail(int $id): JournalEntry
     {
         return $this->model->with('lines.account')->findOrFail($id);

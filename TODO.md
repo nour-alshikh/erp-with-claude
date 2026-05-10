@@ -67,12 +67,12 @@ state machine pattern in PHP, Carbon date calculations for attendance/leave dura
 ---
 
 ## Phase 4: Accounting Foundation
-- [ ] Chart of Accounts CRUD (parent-child hierarchy, account types)
-- [ ] Manual Journal Entry CRUD (debit/credit lines)
-- [ ] Validation: `sum(debits) === sum(credits)` enforced in Service, throws if unbalanced
-- [ ] Journal Entry list with filters (date, type, status)
-- [ ] Post journal entry (draft → posted)
-- [ ] Frontend: chart of accounts tree, journal entry form with dynamic lines
+- [x] Chart of Accounts CRUD (parent-child hierarchy, account types)
+- [x] Manual Journal Entry CRUD (debit/credit lines)
+- [x] Validation: `sum(debits) === sum(credits)` enforced in Service, throws if unbalanced
+- [x] Journal Entry list with filters (date, type, status)
+- [x] Post journal entry (draft → posted)
+- [x] Frontend: chart of accounts tree, journal entry form with dynamic lines
 
 📚 Dev Guide — Double-Entry Accounting:
 Every financial event = one journal entry with ≥ 2 lines where debits = credits exactly.
