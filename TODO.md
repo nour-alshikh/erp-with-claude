@@ -108,14 +108,14 @@ for running totals, Laravel Observers to auto-trigger low-stock checks after OUT
 ---
 
 ## Phase 6: Sales Module
-- [ ] Customers CRUD (contact, credit limit, balance)
-- [ ] Quotations CRUD (line items, discount, tax)
-- [ ] Convert Quotation → Sales Order (status machine)
-- [ ] Convert Sales Order → Invoice
-- [ ] Invoice PDF generation (queued)
-- [ ] Record payment (partial/full) → auto-creates AR journal entry
+- [x] Customers CRUD (contact, credit limit, balance)
+- [x] Quotations CRUD (line items, discount, tax)
+- [x] Convert Quotation → Sales Order (status machine)
+- [x] Convert Sales Order → Invoice
+- [x] Invoice PDF generation (queued)
+- [x] Record payment (partial/full) → auto-creates AR journal entry
 - [ ] Sales reports (by customer, product, period)
-- [ ] Frontend: customer list, quotation builder, invoice view, payment modal
+- [x] Frontend: customer list, quotation builder, invoice view, payment modal
 
 📚 Dev Guide — Sales Pipeline State Machine:
 Each document (Quotation/SalesOrder/Invoice) has a `status` field with allowed transitions only:

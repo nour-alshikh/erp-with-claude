@@ -64,6 +64,18 @@ class AppServiceProvider extends ServiceProvider
 
         // ── Sales Module ─────────────────────────────────────────────────────
         $this->app->bind(
+            \App\Modules\Sales\Repositories\Interfaces\CustomerRepositoryInterface::class,
+            \App\Modules\Sales\Repositories\CustomerRepository::class,
+        );
+        $this->app->bind(
+            \App\Modules\Sales\Repositories\Interfaces\QuotationRepositoryInterface::class,
+            \App\Modules\Sales\Repositories\QuotationRepository::class,
+        );
+        $this->app->bind(
+            \App\Modules\Sales\Repositories\Interfaces\SalesOrderRepositoryInterface::class,
+            \App\Modules\Sales\Repositories\SalesOrderRepository::class,
+        );
+        $this->app->bind(
             \App\Modules\Sales\Repositories\Interfaces\InvoiceRepositoryInterface::class,
             \App\Modules\Sales\Repositories\InvoiceRepository::class,
         );
