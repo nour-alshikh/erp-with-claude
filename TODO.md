@@ -199,12 +199,12 @@ financial statement structure (the accounting equation: Assets = Liabilities + E
 ---
 
 ## Phase 10: Dashboard
-- [ ] KPI cards: Revenue MTD, Expenses MTD, Net Profit, Outstanding AR, Outstanding AP
-- [ ] Revenue trend chart — last 12 months (Recharts LineChart)
-- [ ] Top 5 products by revenue (Recharts BarChart)
-- [ ] Top 5 customers by revenue
-- [ ] Low stock alerts widget (products below reorder point)
-- [ ] Recent transactions feed (last 10 invoices + POS transactions)
+- [x] KPI cards: Revenue MTD, Expenses MTD, Net Profit, Outstanding AR, Outstanding AP
+- [x] Revenue trend chart — last 12 months (Recharts LineChart)
+- [x] Top 5 products by revenue (Recharts BarChart)
+- [x] Top 5 customers by revenue
+- [x] Low stock alerts widget (products below reorder point)
+- [x] Recent transactions feed (last 10 invoices + POS transactions)
 
 ---
 
